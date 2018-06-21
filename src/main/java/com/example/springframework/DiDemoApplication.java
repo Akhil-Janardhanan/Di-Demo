@@ -15,10 +15,10 @@ public class DiDemoApplication {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(DiDemoApplication.class, args);
 		HelloWorldController helloWorldController = context.getBean(HelloWorldController.class);
-		helloWorldController.print();
 		
-		//System.out.println(context.getBean(PropertyInjectedController.class).sayHello());
+		System.out.println(helloWorldController.print());
+		System.out.println(context.getBean(PropertyInjectedController.class).sayHello());
 		//System.out.println(context.getBean(SetterInjectedController.class).sayHello());
-		System.out.println(context.getBean(ConstructorInjectedController.class).sayHello());
+		//System.out.println(context.getBean(ConstructorInjectedController.class).sayHello());
 	}
 }

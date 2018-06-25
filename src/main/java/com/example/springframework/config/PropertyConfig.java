@@ -11,11 +11,11 @@ import com.example.springframework.examplebeans.FakeDataSource;
 import com.example.springframework.examplebeans.FakeJmsDataSource;
 
 @Configuration
-//@PropertySource("classpath:datasource.properties")
+/*//@PropertySource("classpath:datasource.properties")
 @PropertySources({
 	@PropertySource("classpath:datasource.properties"),
 	@PropertySource("classpath:jms.properties")
-})
+})*/
 public class PropertyConfig {
 
 	@Value("${com.username}")
@@ -58,10 +58,10 @@ public class PropertyConfig {
 		return fakeJmsDataSource;
 	}
 	
-	@Bean
+	/*@Bean
 	public static PropertySourcesPlaceholderConfigurer properties() {
 		
 		PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
 		return propertySourcesPlaceholderConfigurer;
-	}
+	}*/
 }

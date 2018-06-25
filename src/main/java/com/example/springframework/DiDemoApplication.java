@@ -8,6 +8,7 @@ import com.example.springframework.controllers.ConstructorInjectedController;
 import com.example.springframework.controllers.HelloWorldController;
 import com.example.springframework.controllers.PropertyInjectedController;
 import com.example.springframework.controllers.SetterInjectedController;
+import com.example.springframework.examplebeans.FakeDataSource;
 
 @SpringBootApplication
 public class DiDemoApplication {
@@ -16,8 +17,10 @@ public class DiDemoApplication {
 		ApplicationContext context = SpringApplication.run(DiDemoApplication.class, args);
 		HelloWorldController helloWorldController = context.getBean(HelloWorldController.class);
 		
-		System.out.println(helloWorldController.print());
-		System.out.println(context.getBean(PropertyInjectedController.class).sayHello());
+		FakeDataSource fakeDataSource = context.getBean(FakeDataSource.class);
+		System.out.println(fakeDataSource.getUser() + "----------" + fakeDataSource.getPassword());
+		//System.out.println(helloWorldController.print());
+		//System.out.println(context.getBean(PropertyInjectedController.class).sayHello());
 		//System.out.println(context.getBean(SetterInjectedController.class).sayHello());
 		//System.out.println(context.getBean(ConstructorInjectedController.class).sayHello());
 	}

@@ -1,0 +1,5 @@
+com:
+  jms:
+    username: AKhil_JMS
+    password: Akhil
+    url: Some_URL

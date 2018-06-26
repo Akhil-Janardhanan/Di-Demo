@@ -22,8 +22,8 @@ public class DiDemoApplication {
 		System.out.println(fakeDataSource.getUser() + "----------" + fakeDataSource.getPassword());
 		FakeJmsDataSource fakeJmsDataSource = context.getBean(FakeJmsDataSource.class);
 		System.out.println(fakeJmsDataSource.getUser() + "----------" + fakeJmsDataSource.getPassword());
-		//System.out.println(helloWorldController.print());
-		//System.out.println(context.getBean(PropertyInjectedController.class).sayHello());
+		System.out.println(helloWorldController.print());
+		System.out.println(context.getBean(PropertyInjectedController.class).sayHello());
 		//System.out.println(context.getBean(SetterInjectedController.class).sayHello());
 		//System.out.println(context.getBean(ConstructorInjectedController.class).sayHello());
 	}
